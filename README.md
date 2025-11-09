@@ -1,21 +1,32 @@
-# ShortestPath
-DSA MiniProject- Finding Shortest Path in Graph using Dijkstra and Bellman–Ford (C Language)
+DSA Mini-Project – Finding the Shortest Path in a Graph using Dijkstra and Bellman–Ford algorithms in C Language
+
 Topic: Finding Shortest Path in a Graph
 Language: C
 IDE Used: Code::Blocks
 
- Description
+📄 Description
+
 This mini-project implements Dijkstra and Bellman–Ford algorithms in C to find the shortest path between two vertices in a weighted graph and compare their results.
 
+Dijkstra works only for graphs with non-negative weights.
+
+Bellman–Ford works for graphs with negative weights and can detect negative cycles.
+
 ⚙️ How to Run
+
 Open main.c in Code::Blocks.
-Compile and run.
+
+Compile and run the program.
+
 Enter:
+
 Number of vertices and edges
-Edge details (u v w)
+
+Edge details in the format (u v w)
+
 Source and destination vertices
 
-Example Input
+📝 Example Input
 Enter number of vertices and edges: 4 5
 Enter edges (u v w):
 0 1 2
@@ -27,30 +38,34 @@ Enter source vertex: 0
 Enter destination vertex: 3
 
 ✅ Example Output
-=========== Dijkstra's Algorithm ===========
+Dijkstra's Algorithm
 Vertex  Distance  Path (with weights)
-0        0         0
-1        2         0(2) -> 1
-2        5         0(2) -> 1(3) -> 2
-3        6         0(2) -> 1(3) -> 2(1) -> 3
+0       0         0
 
-=========== Bellman-Ford Algorithm ===========
+1       2         0(2) -> 1
+
+2       5         0(2) -> 1(3) -> 2
+
+3       6         0(2) -> 1(3) -> 2(1) -> 3
+
+Bellman–Ford Algorithm
 Vertex  Distance  Path (with weights)
-0        0         0
-1        2         0(2) -> 1
-2        5         0(2) -> 1(3) -> 2
-3        6         0(2) -> 1(3) -> 2(1) -> 3
+0       0         0
 
-********** FINAL RESULT **********
+1       2         0(2) -> 1
+
+2       5         0(2) -> 1(3) -> 2
+
+3       6         0(2) -> 1(3) -> 2(1) -> 3
+
+Final Result
 Source: 0   Destination: 3  
 Shortest Distance = 6  
-Path: 0(2) -> 1(3) -> 2(1) -> 3  
+Path: 0(2) -> 1(3) -> 2(1) -> 3
 (Result verified by both algorithms)
 
- Notes
-Both Dijkstra and Bellman–Ford give the same result for positive weights.
-For graphs containing negative edge weights, only Bellman–Ford gives correct results.
+📌 Notes
+
+Both Dijkstra and Bellman–Ford give the same result for graphs with positive weights.
 
 For graphs containing negative edge weights, only Bellman–Ford gives correct results.
-
-If a negative cycle exists, the program will display a warning message.
